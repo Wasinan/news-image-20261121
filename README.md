@@ -36,7 +36,10 @@ UK–EU youth-mobility deal for 100,000 young Britons; New York to close
 Rikers Island jail by 2032.
 
 The image is self-contained: the judge needs no news feed, every story is
-told by the picture and its captions.
+told by the picture and its captions. It was drawn from scratch with a
+script (PIL + DejaVu fonts): two rows of illustrated panels under one
+masthead, a ticker along the bottom, and every headline set large enough
+to read at 1024×1024.
 
 ## Running it
 
@@ -45,7 +48,9 @@ python3 main.py   # writes /output/entry.png (1024x1024 PNG, < 1 MiB)
 ```
 
 Deterministic: the output is a byte-for-byte copy of `entry.png` in this
-repository. Python 3.13, standard library only, no network, no install step.
+repository, so two runs write the same file. Python 3.13, standard library
+only, no network, no install step. Set `MAKEFUN_OUTPUT_DIR` to choose where
+the copy lands; it defaults to `/output`.
 
 ## License
 
